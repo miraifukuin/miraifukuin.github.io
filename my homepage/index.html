@@ -1,0 +1,522 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>蒋振升|Miraifukuin</title>
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<script src="js/jquery-1.11.0.min.js"></script>
+<link href="css/style.css" rel="stylesheet" type="text/css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+	<script type="text/javascript">
+	$(function () {
+		
+		var filterList = {
+		
+			init: function () {
+			
+				// MixItUp plugin
+				// http://mixitup.io
+				$('#portfoliolist').mixitup({
+					targetSelector: '.portfolio',
+					filterSelector: '.filter',
+					effects: ['fade'],
+					easing: 'snap',
+					// call the hover effect
+					onMixEnd: filterList.hoverEffect()
+				});				
+			
+			},
+			
+			hoverEffect: function () {
+			
+				// Simple parallax effect
+				$('#portfoliolist .portfolio').hover(
+					function () {
+						$(this).find('.label').stop().animate({bottom: 0}, 200, 'easeOutQuad');
+						$(this).find('img').stop().animate({top: -30}, 500, 'easeOutQuad');				
+					},
+					function () {
+						$(this).find('.label').stop().animate({bottom: -40}, 200, 'easeInQuad');
+						$(this).find('img').stop().animate({top: 0}, 300, 'easeOutQuad');								
+					}		
+				);				
+			
+			}
+
+		};
+		
+		// Run the show!
+		filterList.init();
+		
+		
+	});	
+	</script>
+	<script type="text/javascript" src="js/easing.js"></script>
+					<script type="text/javascript">
+					jQuery(document).ready(function($) {
+						$(".scroll").click(function(event){		
+							event.preventDefault();
+							$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+						});
+					});
+</script>
+</head>
+<body>
+	<!--- Header Starts Here ---->
+	<div class="header" id="home">
+		<div class="container">
+			<div class="logos">
+				<a href="index.html"><img src="images/icon1.png" alt=""></a>
+			</div>
+			<!--- banner Slider starts Here --->
+	  			<script src="js/responsiveslides.min.js"></script>
+					 <script>
+					    // You can also use "$(window).load(function() {"
+					    $(function () {
+					      // Slideshow 4
+					      $("#slider4").responsiveSlides({
+					        auto: true,
+					        pager: true,
+					        nav: true,
+					        speed: 500,
+					        namespace: "callbacks",
+					        before: function () {
+					          $('.events').append("<li>before event fired.</li>");
+					        },
+					        after: function () {
+					          $('.events').append("<li>after event fired.</li>");
+					        }
+					      });
+					
+					    });
+					  </script>
+			<!----//End-slider-script---->
+			<!-- Slideshow 4 -->
+			    <div  id="top" class="callbacks_container">
+			      <ul class="rslides" id="slider4">
+			        <li>
+			        	<div class="slide-content">
+							<h2>  Welcome to my homepage!</h2>
+							<p>This is my first webpage,<br> where I will show some personal information for you. </p>
+							<a href=""> Follow Me!</a>
+						</div>
+					 </li>
+					 <li>
+			        	<div class="slide-content">
+							<h2>  欢迎来到我的主页！</h2>
+							<p>这是我的第一个网站，<br> 在这里我将会呈现一些我的个人信息。 </p>
+							<a href=""> 滴滴，开车了！</a>
+						</div>
+					 </li>
+					 <li>
+			        	<div class="slide-content">
+							<h2>  私のホームページへようこそ！</h2>
+							<p>これが私の初めての個人サイトで、<br> これから私の個人情報を紹介します。</p>
+							<a href=""> ついてくれ！</a>
+						</div>
+					 </li>
+			      </ul>
+			    </div>
+		</div>
+	</div>
+	<!--- Header Ends Here ---->
+	<!-- Navigation Starts Here ---->
+	<!-- top-nav -->
+		
+		<div class="top-nav">
+			<nav>
+				<span class="menu"></span>
+				<ul>
+					<li><a href="#about" class="scroll">About Me</a></li>
+					<li><a href="#work" class="scroll">Gallery</a></li>
+					<li class="active"><a href="#home" class="scroll">Home</a></li>
+					<li><a href="#service" class="scroll">Interests</a></li>
+					<li><a href="#contact" class="scroll">Contact</a></li>
+					<div class="clearfix"> </div>
+				</ul>
+			</nav>
+		</div>
+		<script>
+					$( "span.menu" ).click(function() {
+					  $( ".top-nav ul" ).slideToggle( "slow", function() {
+					    // Animation complete.
+					  });
+					});
+				</script>
+
+		<script src="js/myscript.js"> </script>
+		<!-- top-nav -->
+	<!--- Navigarion Ends Here --->
+<!--	<div class="tlinks">Collect from <a href="http://www.cssmoban.com/" >网页模板</a></div> -->
+	<!--- About Us Starts Here ---->
+	<div class="about" id="about">
+		<div class="container">
+			<h3 class="top-title">About me</h3>
+			<!--<h4>Why Us?</h4>-->
+			<p>我是蒋振升，现就读于华中科技大学的光学与电子信息学院，于2016年入学集成电路设计与集成系统专业，现已大四，正在申请去日本读研究生，同时也开始在王超老师的实验室中开展毕业设计活动。大学三年以来，有过为了目标埋头奋斗的时光，也经常陷于迷惘徘徊不前，跌跌撞撞至少也已经一路走到了现在，虽然成就不多，但也不甚后悔，这都是我自己人生组成的一部分。</p>
+			<p>三年里，我在完成主修专业的课业之余，也辅修了日语的双学位，同时也积极参加了许多志愿者、社会实践、体育运动等活动。在有空闲时也会走出校门，用双脚丈量武汉的土地，用手中的相机去记录这座城市的角落，感受历史与生活的气息在这里交汇融合。当然，我也有许多其他的爱好，比如看动漫和电影，欣赏音乐，阅读科幻小说等等。</p>
+			<p class="show-not">接下来我将简要呈现我在大学中与专业相关的主要项目经历：</p>
+			<div class="row about-row">
+				<div class="col-md-3 about-row-column">
+					<img src="images/DDR.jpg" alt=""/>
+					<img src="images/FPGA板子.PNG" alt=""/>
+				</div>
+				<div class="col-md-9 about-column">
+					<h3>基于FPGA的DDR跳舞机游戏</h3>
+					<h4>指导老师：郑朝霞</h4>
+					<p>s所用开发板为DE2-115。先完成整个数字电路的架构设计，然后用硬件描述语言Verilog HDL去描述游戏行为，游戏的图像显示基于VGA标准，玩家需根据音乐节奏在特定的时机按下相应的按键才能将游戏进行下去。</p>
+					<h5>备注：</h5>
+					<p>此为2018年数字课程设计的大课题，最终小组所得成绩为95分。</p>
+					<!--<div id="progressbar"><div id="progress" ><div id="pbaranim">11%</div></div></div>
+					<ul class="social">
+						<li><i class="fa"></i></li>
+						<li><i class="tw"></i></li>
+						<li><i class="in"></i></li>
+						<li><i class="pw"></i></li>
+					</ul>-->
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="row about-row">
+				<div class="col-md-9 about-column">
+					<h3>基于SB3500平台的MTCNN+FaceNet人脸检测及识别实现</h3>
+					<h4>指导老师：邹士革</h4>
+					<p>设计一套能在SDR DSP芯片开发板上正确运行的MTCNN+FaceNet人脸检测及识别系统，采用标准C语言实现。人脸识别需要满足one-shot-learning的要求。对算法进行定点化处理，使用SDR DSP芯片的RPU和多线程技术进行算法优化。</p>
+					<h5>备注：</h5>
+					<p>此为2019年全国大学生集成电路设计大赛中，华夏芯杯的杯赛题目。最终我所在队伍的获奖情况为华中赛区二等奖。</p>
+					<!--<div id="progressbar"><div id="progress" ><div id="pbaranim">11%</div></div></div>
+					<ul class="social">
+						<li><i class="fa"></i></li>
+						<li><i class="tw"></i></li>
+						<li><i class="in"></i></li>
+						<li><i class="pw"></i></li>
+					</ul>-->
+				</div>
+				<div class="col-md-3 about-row-column">
+					<img src="images/集电大赛.png" alt=""/>
+					<img src="images/P-Net.png" alt=""/>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="row about-row">
+				<div class="col-md-3 about-row-column">
+					<img src="images/CNN.png" alt=""/>
+					<img src="images/BP.png" alt=""/>
+				</div>
+				<div class="col-md-9 about-column">
+					<h3>面向智能机器人的目标物体识别高能效硬件设计</h3>
+					<h4>指导老师：王超</h4>
+					<p>使用Python或者Matlab构建深度卷积神经网络，为构建基于目标物体的语义地图，实现对不同场景下目标物体的识别和分类，完成高能效硬件加速的架构设计和低功耗的电路设计，通过Verilog代码实现对不同目标物体识别及分类的设计、仿真、及硬件实现，最后形成总结报告。</p>
+					<h5>备注：</h5>
+					<p>此为毕业设计的课题，现已开始查阅文献积极进行研究中。</p>
+					<!--<div id="progressbar"><div id="progress" ><div id="pbaranim">11%</div></div></div>
+					<ul class="social">
+						<li><i class="fa"></i></li>
+						<li><i class="tw"></i></li>
+						<li><i class="in"></i></li>
+						<li><i class="pw"></i></li>
+					</ul>-->
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<!--- Testimonial Starts here --->
+			<div class="testimonial">
+					<h3 class="top-title">台词语录</h3>
+					<h4>摘自一些我很喜欢的影视和书籍</h4>
+					<script>
+					    // You can also use "$(window).load(function() {"
+					    $(function () {
+					      // Slideshow 4
+					      $("#slider2").responsiveSlides({
+					        auto: true,
+					        pager: true,
+					        nav: true,
+					        speed: 500,
+					        namespace: "callbacks",
+					        before: function () {
+					          $('.events').append("<li>before event fired.</li>");
+					        },
+					        after: function () {
+					          $('.events').append("<li>after event fired.</li>");
+					        }
+					      });
+					
+					    });
+					  </script>
+					<div  id="top" class="callbacks_container">
+			      		<ul class="rslides" id="slider2">
+			        		<li>
+								<div class="testimonial-slide">
+									<blockquote class="style1">
+										<span>どうか、君と君を囲むこの世界が、幸せでありますように。祈りは、未来への福音で、満ちている。</span>
+									</blockquote>
+									<h5>《空の境界‐未来福音》</h5>
+								</div>
+							</li>
+							<li>
+								<div class="testimonial-slide">
+									<blockquote class="style1">
+										<span>我们一路奋战，不是为了改变世界，而是为了不让世界改变我们。</span>
+									</blockquote>
+									<h5>《熔炉》</h5>
+								</div>
+							</li>
+							<li>
+								<div class="testimonial-slide">
+									<blockquote class="style1">
+										<span>But a man is not made for defeat. A man can be destroyed but not defeated.</span>
+									</blockquote>
+									<h5>《The Old Man and the Sea》</h5>
+								</div>
+							</li>
+						</ul>
+					</div>
+			</div>
+			<!--- Testimonial Ends here --->
+		</div>
+	</div>
+	<!--- About Us Ends Here ---->
+	<!--- Featured Work Starts Here ---->
+	<div class="feature" id="work">
+		<div class="container">			
+				<h3 class="top-title">GALLERY</h3>
+				<div class="portfolio">
+					<ul id="filters" class="clearfix">
+						<li><span class="filter" data-filter="app card icon logo web">所有照片</span></li>
+						<li><span class="filter" data-filter="app">摄影</span></li>
+						<li><span class="filter active" data-filter="card">证书</span></li>
+						<li><span class="filter" data-filter="icon">活动</span></li>
+						<li><span class="filter" data-filter="logo">肖像</span></li>
+					</ul>
+					<div id="portfoliolist">
+					<div class="portfolio app mix_all" data-cat="app" style="display: inline-block; opacity: 1;">
+						<div class="portfolio-wrapper">		
+							<a href="#small-dialog" class="b-link-stripe b-animate-go  thickbox popup-with-zoom-anim">
+						     <img src="images/s1.jpg" /><div class="b-wrapper"><h2 class="b-animate b-from-left    b-delay03 "><img src="images/icon-eye.png" alt=""/></h2>
+						  	<p class="b-animate b-from-right    b-delay03 ">在宿舍天台拍摄喻家湖畔的晚霞<br><span class="m_4"></span></p></div></a>
+		                </div>
+					</div>				
+					<div class="portfolio icon mix_all" data-cat="icon" style="display: inline-block; opacity: 1;">
+						<div class="portfolio-wrapper">		
+							<a href="#small-dialog1" class="b-link-stripe b-animate-go  thickbox popup-with-zoom-anim">
+						     <img src="images/h1.JPG" /><div class="b-wrapper"><h2 class="b-animate b-from-left    b-delay03 "><img src="images/icon-eye.png" alt=""/></h2>
+						  	<p class="b-animate b-from-right    b-delay03 ">大一暑假上海社会实践之行<br><span class="m_4"></span></p></div></a>
+		                </div>
+					</div>		
+					<div class="portfolio card mix_all" data-cat="card" style="display: inline-block; opacity: 1;">
+						<div class="portfolio-wrapper">		
+							<a href="#small-dialog2" class="b-link-stripe b-animate-go  thickbox popup-with-zoom-anim">
+						     <img src="images/z1.png" /><div class="b-wrapper"><h2 class="b-animate b-from-left    b-delay03 "><img src="images/icon-eye.png" alt=""/></h2>
+						  	<p class="b-animate b-from-right    b-delay03 ">托福成绩证明书<br><span class="m_4"></span></p></div></a>
+		                </div>
+					</div>				
+					<div class="portfolio logo mix_all" data-cat="logo" style="display: inline-block; opacity: 1;">
+						<div class="portfolio-wrapper">		
+							<a href="#small-dialog3" class="b-link-stripe b-animate-go  thickbox popup-with-zoom-anim">
+						     <img src="images/x1.jpg" /><div class="b-wrapper"><h2 class="b-animate b-from-left    b-delay03 "><img src="images/icon-eye.png" alt=""/></h2>
+						  	<p class="b-animate b-from-right    b-delay03 ">标准证件照<br><span class="m_4"></span></p></div></a>
+		                </div>
+					</div>	
+					<div class="portfolio card mix_all" data-cat="card" style="display: inline-block; opacity: 1;">
+						<div class="portfolio-wrapper">		
+							<a href="#small-dialog4" class="b-link-stripe b-animate-go  thickbox popup-with-zoom-anim">
+						     <img src="images/z2.png" /><div class="b-wrapper"><h2 class="b-animate b-from-left    b-delay03 "><img src="images/icon-eye.png" alt=""/></h2>
+						  	<p class="b-animate b-from-right    b-delay03 ">日语能力考试二级证书<br><span class="m_4"></span></p></div></a>
+		                </div>
+					</div>			
+					<div class="portfolio app mix_all" data-cat="app" style="display: inline-block; opacity: 1;">
+						<div class="portfolio-wrapper">		
+							<a href="#small-dialog5" class="b-link-stripe b-animate-go  thickbox popup-with-zoom-anim">
+						     <img src="images/s2.jpg" /><div class="b-wrapper"><h2 class="b-animate b-from-left    b-delay03 "><img src="images/icon-eye.png" alt=""/></h2>
+						  	<p class="b-animate b-from-right    b-delay03 ">新加坡国立大学校门口<br><span class="m_4"></span></p></div></a>
+		                </div>
+					</div>	
+					<div class="portfolio logo mix_all" data-cat="logo" style="display: inline-block; opacity: 1;">
+						<div class="portfolio-wrapper">		
+							<a href="#small-dialog6" class="b-link-stripe b-animate-go  thickbox popup-with-zoom-anim">
+						     <img src="images/x2.jpg" /><div class="b-wrapper"><h2 class="b-animate b-from-left    b-delay03 "><img src="images/icon-eye.png" alt=""/></h2>
+						  	<p class="b-animate b-from-right    b-delay03 ">在天台凹造型自拍<br><span class="m_4"></span></p></div></a>
+		                </div>
+					</div>	
+					<div class="portfolio app mix_all" data-cat="app" style="display: inline-block; opacity: 1;">
+						<div class="portfolio-wrapper">		
+							<a href="#small-dialog7" class="b-link-stripe b-animate-go  thickbox popup-with-zoom-anim">
+						     <img src="images/s3.jpg" /><div class="b-wrapper"><h2 class="b-animate b-from-left    b-delay03 "><img src="images/icon-eye.png" alt=""/></h2>
+						  	<p class="b-animate b-from-right    b-delay03 ">新加坡圣淘沙的海滩<br><span class="m_4"></span></p></div></a>
+		                </div>
+					</div>			
+					<div class="portfolio icon mix_all"  data-cat="icon" style="display: inline-block; opacity: 1;">
+						<div class="portfolio-wrapper">		
+							<a href="#small-dialog8" class="b-link-stripe b-animate-go  thickbox popup-with-zoom-anim">
+						     <img src="images/h2.jpg" class="img-hid" /><div class="b-wrapper"><h2 class="b-animate b-from-left    b-delay03 "><img src="images/icon-eye.png" alt=""/></h2>
+						  	<p class="b-animate b-from-right    b-delay03 ">2019暑期新国大夏令营<br><span class="m_4"></span></p></div></a>
+		                </div>
+					</div>
+				</div>
+				</div>
+				<div class="clearfix"></div>
+				<!---pop-up-box---->
+					  <script type="text/javascript" src="js/modernizr.custom.min.js"></script>    
+					<link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all"/>
+					<script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
+				<!---//pop-up-box---->
+					<div id="small-dialog" class="mfp-hide">
+						<div class="image-top">
+							<img src="images/s1.jpg" alt=""/>
+							<!--<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>-->
+						</div>
+					</div>
+					<div id="small-dialog1" class="mfp-hide">
+						<div class="image-top">
+							<img src="images/h1.JPG" alt=""/>
+							<!--<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>-->
+						</div>
+					</div>
+					<div id="small-dialog2" class="mfp-hide">
+						<div class="image-top">
+							<img src="images/z1.jpg" alt=""/>
+							<!--<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>-->
+						</div>
+					</div>
+					<div id="small-dialog3" class="mfp-hide">
+						<div class="image-top">
+							<img src="images/x1.jpg" alt=""/>
+							<!--<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>-->
+						</div>
+					</div>
+					<div id="small-dialog4" class="mfp-hide">
+						<div class="image-top">
+							<img src="images/z2.png" alt=""/>
+							<!--<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>-->
+						</div>
+					</div>
+					<div id="small-dialog5" class="mfp-hide">
+						<div class="image-top">
+							<img src="images/s2.jpg" alt=""/>
+							<!--<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>-->
+						</div>
+					</div>
+					<div id="small-dialog6" class="mfp-hide">
+						<div class="image-top">
+							<img src="images/x2.jpg" alt=""/>
+							<!--<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>-->
+						</div>
+					</div>
+					<div id="small-dialog7" class="mfp-hide">
+						<div class="image-top">
+							<img src="images/s3.jpg" alt=""/>
+							<!--<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>-->
+						</div>
+					</div>
+					<div id="small-dialog8" class="mfp-hide">
+						<div class="image-top">
+							<img src="images/h2.jpg" alt=""/>
+							<!--<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>-->
+						</div>
+					</div>
+			<script>
+						$(document).ready(function() {
+						$('.popup-with-zoom-anim').magnificPopup({
+							type: 'inline',
+							fixedContentPos: false,
+							fixedBgPos: true,
+							overflowY: 'auto',
+							closeBtnInside: true,
+							preloader: false,
+							midClick: true,
+							removalDelay: 300,
+							mainClass: 'my-mfp-zoom-in'
+						});
+																						
+						});
+				</script>		
+
+				<!---Services Starts Here ---->
+					<div class="services" id="service">
+							<h3 class="top-title">INTERESTS</h3>
+							<div class="row services-row">
+								<div class="col-md-4 services-column">
+									<h4>影视</h4>
+									<i class="icon1"></i>
+									<p>尤其喜爱日本的动画，从小入宅，重口猎奇清新萌豚硬核战斗来者不拒，电影喜欢看情感压抑而丰富的，不怎么看剧，</p>
+								</div>
+								<div class="col-md-4 services-column">
+									<h4>摄影</h4>
+									<i class="icon2"></i>
+									<p>从高中起便想拥有一台相机，在大一时得以实现，很享受通过取景器观察世界的感觉和快门按下的清脆声音，想拍出梦想中大海的照片</p>
+								</div>
+								<div class="col-md-4 services-column">
+									<h4>运动</h4>
+									<i class="icon3"></i>
+									<p>家里有个喜欢运动的老爸，从小便接触了许多球类运动，比较擅长的有篮球、羽毛球和乒乓球，网球已经入门，上头中</p>
+								</div>
+								<div class="clearfix"></div>
+							</div>
+					</div>
+				<!---Services Ends Here ---->
+		</div>
+	</div>
+	<!--- Featured Work Ends Here ---->	
+	<!--- Contact-starts Here --->
+	<div class="contact" id="contact">
+		<div class="contact-map">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3022.7804176153004!2d-73.996743!3d40.744857!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259bb1d7e5e77%3A0xd1e7243841cc53ef!2sCommunist+Party+of+the+United+States+of+America!5e0!3m2!1sen!2sin!4v1412848110107"  frameborder="0" style="border:0"></iframe>
+		</div>
+		<div class="contact-top">
+			<h3>Contact</h3>
+			<div class="row contact-top-row">
+				<div class="col-md-4 contact-top-column">
+					<address>
+						<p>
+							中国，湖北，武汉</br>
+							洪山区珞喻路1037号，华中科技大学<br>
+							邮政编码：430074
+						</p>
+						<p>Phone: 158-2704-9931</p>
+						<p><a href="jiangzs71@qq.com">jiangzs71@qq.com</a></p>
+					</address>
+				</div>
+				<div class="col-md-8 contact-top-column1">
+					<span class="text-box">
+						<label class="text-icon"></label>
+						<input type="text" placeholder="Name" required="">
+					</span>
+					<div class="text">
+						<span class="text-box">
+							<label class="text-icon2"></label>
+							<input type="text" placeholder="Email" required="">
+						</span>
+					</div>
+					<div class="text">
+						<span class="text-box">
+							<label class="text-icon3"></label>
+							<input type="text" placeholder="Website" required="">
+						</span>
+					</div>
+					<div class="text">
+						<textarea placeholder="Message" required></textarea>
+					</div>
+					<div class="text">
+						<input type="submit" value="send message">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--- Contact-Ends Here --->
+	<!--- Footer Starts here -->
+	<div class="footer">
+		<ul class="footer-icons">
+			<li><i class="fb"></i></li>
+			<li><i class="twit"></i></li>
+		</ul>
+		<p class="copyright">
+			Copyright &copy; 2014.Company name All rights reserved.More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家"></a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank"></a>
+		</p>
+				<a href="#home" id="toTop" class="scroll" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+		
+	</div>
+	<!--- Footer Ends here --->
+
+</body>
+</html>
